@@ -53,7 +53,7 @@ const rgbToHex = (colorArray) => '#' + colorArray.map(x => {
 const rgbToHexPalette = (colorArray) => colorArray.flatMap(rgbToHex)
 
 const makeAPICall = () => {
-  fetch('http://localhost:4000/cors', {
+  fetch('https://morning-shore-76893.herokuapp.com/cors', {
     method:'post',
     headers: {'Content-Type' : 'application/json'},
     body: JSON.stringify({
@@ -64,12 +64,10 @@ const makeAPICall = () => {
   .then(response => {
     if(response) {
       setPalette(rgbToHexPalette(response)) 
-
-     
     }
   })
- 
 }
+
 const handleReset = () => {
   ref.current.value = null
   setInputImgField('')
