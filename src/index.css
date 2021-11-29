@@ -57,24 +57,21 @@ code {
  
  
 }
-.imgInputContainer > input {
+.imgInput {
   width: 80%;
   margin: 10px;
   -webkit-box-shadow: 3px 8px 15px 1px rgba(0,0,0,0.67); 
   box-shadow: 3px 8px 15px 1px rgba(0,0,0,0.67);
 border: none;
+height: 40px;
+padding: 5px;
 }
 
 #fileUploadInput {
 display: none;
 }
 
-.imgInput {
-  width: 40%;
-  height: 40px;
-  padding: 5px;
-  
-}
+ 
 .imgInputLabel {
  font-size: 25px;
  margin-right: 8px;
@@ -101,3 +98,30 @@ display: none;
   height: auto;
 }
 
+#colorResultContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.colorBox {
+  margin:20px;
+  width:100px;
+  height:100px;
+  border-radius:50%
+}
+@media screen and (max-width:768px) {
+  .imgInputContainer {
+    flex-direction: column;
+  }
+  .colorBox {
+    width: 60px;
+    height: 60px;
+  };
+  .img {
+    max-width: 200px;
+    height: auto;
+  }
+}
